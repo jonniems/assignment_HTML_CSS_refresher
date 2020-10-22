@@ -1,0 +1,81 @@
+/* Remove all margins and paddings */
+* 
+{
+    margin: 0;
+    padding: 0;
+    }
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5em;
+}
+
+.container {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    grid-template: 100px 210px 100px / 1fr 350px 1% 350px 1fr;
+    grid-template-areas:
+        ". . . . ."
+        ". c1 . c2 ."
+        ". . . . ."
+}
+
+.card {
+    grid-area: c1;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.card:nth-child(2) {
+    grid-area: c2;
+}
+
+.name {
+    font-size: 20px;
+    color: #333;
+    font-weight: 800;
+    padding: 15px 15px 0 15px;
+}
+
+.status {
+    font-size: 16px;
+    color: #aaa;
+    padding: 0 0 0 15px;
+}
+
+.avatar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.details {
+    color: #333;
+    padding: 12px 15px 20px 15px;
+}
+
+.buttons {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 160px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #5ec33a;
+    border: 2px solid #5ec33a;
+    border-radius: 5px 0 0 5px;
+}
+
+button:nth-child(2) {
+    color: #ed4a3d;
+    border: 2px solid #ed4a3d;
+    border-radius: 0 5px 5px 0;
+    margin-left: -2px;
+}
